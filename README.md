@@ -1,6 +1,6 @@
 # Elska Íhluti
 
-This is the source code for Elska íhluti.
+This is the source code for [https://elskaihluti.pages.dev/](Elska íhluti).
 
 ## Running
 
