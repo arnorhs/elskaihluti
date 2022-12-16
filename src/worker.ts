@@ -2,7 +2,7 @@
 import readXlsxFile from 'read-excel-file/web-worker'
 import { Database, Product, UIProduct } from './lib/Database'
 import type { KnownMessages } from './lib/messageData'
-import * as z from 'zod'
+import z from 'zod'
 import { tokenizerRegex } from './lib/tokenizerRegex'
 
 declare var self: Worker
@@ -51,13 +51,13 @@ const search = async (query: string) => {
 }
 
 const fetchInitial = async (url: string) => {
-  const response = await fetch(url)
-
   const { value: lastFile } = (await db.store.get('lastFile')) ?? {}
 
   if (lastFile === url) {
     return postMessage(['ready', undefined])
   }
+
+  const response = await fetch(url)
 
   if (!response.ok) {
     return postMessage(['error', response.statusText])
