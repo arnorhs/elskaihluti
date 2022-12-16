@@ -21,7 +21,7 @@ export const Search: Component = () => {
         placeholder="td. Weller..."
         type="text"
         onKeyUp={(e) => {
-          setSearchQuery(e.currentTarget.value.trim())
+          setSearchQuery(e.currentTarget.value)
         }}
         class="h-12 border-2 rounded-lg px-5 w-full leading-6 text-lg text-black placeholder:text-gray-300"
       />
